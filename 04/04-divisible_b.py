@@ -1,5 +1,6 @@
+numeros=range(1,101)
 factores=[2,3,5]
-columnas=3
+columnas=4
 
 def divisores(num) :
     retorno=[]
@@ -11,8 +12,8 @@ def divisores(num) :
     else :
         return " "+str(tuple(retorno)).replace(",)",")")
 
-for i in range(1,101):
+for i in numeros:
     if (i % columnas) == 0 :
-        print(str(i)+divisores(i))
+        print("{0: >3}{1: <13}".format(i,divisores(i)))
     else :
-        print("{0: <25}".format(str(i)+divisores(i)),end="")
+        print("{0: >3}{1: <13}".format(i,divisores(i)),end="")
